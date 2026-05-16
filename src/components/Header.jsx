@@ -6,6 +6,7 @@ export default function Header({
   theme,
   onToggleTheme,
   onScrollToShop,
+  onOpenCart,
 }) {
   return (
     <header className="site-header">
@@ -25,10 +26,10 @@ export default function Header({
       </nav>
 
       <div className="header-actions" aria-label="Информация пользователя">
-        <div className="stat-pill" title="Товаров в корзине">
+        <button className="stat-pill stat-button" type="button" onClick={onOpenCart} title="Открыть корзину">
           <span className="stat-icon cart-icon" aria-hidden="true" />
           <strong>{cartCount}</strong>
-        </div>
+        </button>
         <div className="stat-pill" title="Баланс">
           <span className="stat-icon wallet-icon" aria-hidden="true" />
           <strong>{balance} ₽</strong>

@@ -14,7 +14,14 @@ export const products = [
     description: "Стартовая привилегия с полезными командами и заметным статусом.",
     price: 99,
     icon: "VIP",
+    iconType: "rank",
+    badge: "7 дней",
     tone: "red",
+    delivery: {
+      type: "permission-group",
+      label: "Группа VIP",
+      command: "lp user {player} parent addtemp vip 7d",
+    },
   },
   {
     id: "premium",
@@ -23,7 +30,14 @@ export const products = [
     description: "Больше возможностей, красивый префикс и приятные бонусы.",
     price: 199,
     icon: "PRE",
+    iconType: "rank",
+    badge: "30 дней",
     tone: "gold",
+    delivery: {
+      type: "permission-group",
+      label: "Группа Premium",
+      command: "lp user {player} parent addtemp premium 30d",
+    },
   },
   {
     id: "deluxe",
@@ -32,7 +46,14 @@ export const products = [
     description: "Расширенный набор команд и усиленный профиль игрока.",
     price: 349,
     icon: "DLX",
+    iconType: "rank",
+    badge: "30 дней",
     tone: "violet",
+    delivery: {
+      type: "permission-group",
+      label: "Группа Deluxe",
+      command: "lp user {player} parent addtemp deluxe 30d",
+    },
   },
   {
     id: "legend",
@@ -41,7 +62,14 @@ export const products = [
     description: "Максимальная привилегия для игроков, которые хотят выделяться.",
     price: 499,
     icon: "LGD",
+    iconType: "rank",
+    badge: "30 дней",
     tone: "ember",
+    delivery: {
+      type: "permission-group",
+      label: "Группа Legend",
+      command: "lp user {player} parent addtemp legend 30d",
+    },
   },
   {
     id: "common-case",
@@ -50,7 +78,14 @@ export const products = [
     description: "Кейс с базовыми наградами, монетами и игровыми предметами.",
     price: 49,
     icon: "BOX",
+    iconType: "case",
+    badge: "1 шт.",
     tone: "steel",
+    delivery: {
+      type: "case",
+      label: "Обычный кейс",
+      command: "case give {player} common 1",
+    },
   },
   {
     id: "rare-case",
@@ -59,7 +94,14 @@ export const products = [
     description: "Больше шанс на ценные предметы и редкие косметические бонусы.",
     price: 99,
     icon: "RARE",
+    iconType: "case",
+    badge: "1 шт.",
     tone: "blue",
+    delivery: {
+      type: "case",
+      label: "Редкий кейс",
+      command: "case give {player} rare 1",
+    },
   },
   {
     id: "legendary-case",
@@ -68,7 +110,14 @@ export const products = [
     description: "Премиальный кейс с самыми заметными наградами сервера.",
     price: 199,
     icon: "LEG",
+    iconType: "case",
+    badge: "1 шт.",
     tone: "gold",
+    delivery: {
+      type: "case",
+      label: "Легендарный кейс",
+      command: "case give {player} legendary 1",
+    },
   },
   {
     id: "unban",
@@ -77,7 +126,14 @@ export const products = [
     description: "Демонстрационный товар для восстановления доступа к серверу.",
     price: 149,
     icon: "BAN",
+    iconType: "shield",
+    badge: "Моментально",
     tone: "red",
+    delivery: {
+      type: "moderation",
+      label: "Снятие блокировки",
+      command: "pardon {player}",
+    },
   },
   {
     id: "prefix-change",
@@ -86,7 +142,14 @@ export const products = [
     description: "Обновите отображаемый префикс и сделайте ник узнаваемым.",
     price: 79,
     icon: "TAG",
+    iconType: "tag",
+    badge: "1 смена",
     tone: "violet",
+    delivery: {
+      type: "ticket",
+      label: "Тикет на смену префикса",
+      command: "voucher give {player} prefix_change 1",
+    },
   },
   {
     id: "case-key",
@@ -95,7 +158,14 @@ export const products = [
     description: "Один ключ для открытия кейса и получения случайной награды.",
     price: 39,
     icon: "KEY",
+    iconType: "key",
+    badge: "1 ключ",
     tone: "steel",
+    delivery: {
+      type: "key",
+      label: "Ключ от кейса",
+      command: "case key give {player} common 1",
+    },
   },
   {
     id: "coins-1000",
@@ -104,7 +174,14 @@ export const products = [
     description: "Пакет монет для внутриигровых покупок и обмена.",
     price: 59,
     icon: "1K",
+    iconType: "coins",
+    badge: "1000",
     tone: "gold",
+    delivery: {
+      type: "currency",
+      label: "1000 монет",
+      command: "eco give {player} 1000",
+    },
   },
   {
     id: "coins-5000",
@@ -113,7 +190,14 @@ export const products = [
     description: "Большой запас монет для быстрого развития на FeverBox.",
     price: 199,
     icon: "5K",
+    iconType: "coins",
+    badge: "5000",
     tone: "ember",
+    delivery: {
+      type: "currency",
+      label: "5000 монет",
+      command: "eco give {player} 5000",
+    },
   },
   {
     id: "cosmetic-effect",
@@ -122,7 +206,14 @@ export const products = [
     description: "Стильный визуальный эффект для персонажа без влияния на баланс.",
     price: 89,
     icon: "FX",
+    iconType: "spark",
+    badge: "Навсегда",
     tone: "blue",
+    delivery: {
+      type: "cosmetic",
+      label: "Косметический эффект",
+      command: "cosmetics give {player} fever_aura",
+    },
   },
 ];
 
